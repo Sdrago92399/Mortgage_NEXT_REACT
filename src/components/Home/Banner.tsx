@@ -40,9 +40,9 @@ export default function Banner() {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <Link href="/start">
-          <Button className="bg-primary hover:bg-secondary transition-all text-lg px-6 py-3 mb-10 rounded-lg">
+          <div className="bg-primary hover:bg-secondary transition-all text-lg px-6 py-3 mb-10 rounded-lg">
             Get Started Today
-          </Button>
+          </div>
         </Link>
       </motion.div>
     </section>
