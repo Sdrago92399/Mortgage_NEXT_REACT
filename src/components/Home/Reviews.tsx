@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface Testimonial {
   name: string;
@@ -44,9 +45,11 @@ export default function Reviews() {
             See all our stories
           </button>
           <div className="flex items-center gap-2 mb-8">
-            <img
+            <Image
               src="https://static.vecteezy.com/system/resources/previews/009/664/666/large_2x/5-star-rating-review-star-transparent-free-png.png"
               alt="Star Rating"
+              width={96}
+              height={96} 
               className="w-24 h-auto"
             />
             <p className="text-gray-600">

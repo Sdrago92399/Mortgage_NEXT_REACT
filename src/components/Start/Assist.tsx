@@ -50,7 +50,7 @@ export default function Assist() {
 
         {/* Main Content */}
         <h1 className="text-3xl md:text-4xl font-bold mb-8">
-          Hi, I'm Betsy!
+          Hi, I&apos;m Betsy!
           <br /> What can I help you with?
         </h1>
 
@@ -60,7 +60,7 @@ export default function Assist() {
             <button
               key={option.value}
               onClick={() => setSelectedOption(option.value)}
-              aria-checked={selectedOption === option.value}
+              aria-pressed={selectedOption === option.value}
               className={`flex flex-col items-center justify-center p-4 border rounded-full transition-colors ${
                 selectedOption === option.value
                   ? "bg-green-700 text-white"
@@ -88,7 +88,7 @@ export default function Assist() {
         {/* Unlock Section */}
         <div className="mb-16 flex justify-center">
           <div className="w-fit text-gray-500 p-4 px-16 rounded-lg bg-[rgb(240,247,241)]">
-            <p className="mb-4 text-md">After a few questions, you'll unlock:</p>
+            <p className="mb-4 text-md">After a few questions, you&apos;ll unlock:</p>
             <div className="flex justify-center">
               <div className="flex flex-col justify-center gap-3">
                 <div className="flex items-center gap-2">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 // TeamMember Component
 interface TeamMemberProps {
@@ -12,10 +13,12 @@ interface TeamMemberProps {
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, imageUrl }) => {
   return (
     <article className="team-member bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-      <img
+      <Image
         src={imageUrl}
         alt={`Portrait of ${name}, ${role} at BetterHousing`}
-        className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+        width={96} 
+        height={96}
+        className="rounded-full mx-auto mb-4 object-cover"
       />
       <h3 className="text-xl font-semibold text-center text-gray-800">{name}</h3>
       <p className="text-center text-gray-600">{role}</p>

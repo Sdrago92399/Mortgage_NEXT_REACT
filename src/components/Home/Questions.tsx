@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const GuideFAQSection = () => {
   const [selectedTab, setSelectedTab] = useState("Guides & FAQs");
@@ -111,13 +111,16 @@ const cardData = {
                 </p>
               </div>
               <div className="flex-grow">
-                <img
-                  alt={card.title}
-                  loading="lazy"
-                  className="w-full rounded object-cover h-[160px] md:h-[130px] lg:h-[200px]"
-                  src={card.img}
-                  style={{ color: "transparent" }}
-                />
+                <div className="relative w-full h-[160px] md:h-[130px] lg:h-[200px] rounded overflow-hidden">
+                  <Image
+                    alt={card.title}
+                    loading="lazy"
+                    src={card.img}
+                    layout="fill"
+                    objectFit="cover"
+                    style={{ color: "transparent" }}
+                  />
+                </div>
               </div>
             </motion.div>
           ))}
