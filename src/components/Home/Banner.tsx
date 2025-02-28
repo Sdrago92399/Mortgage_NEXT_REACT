@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
 export default function Banner() {
@@ -16,32 +17,34 @@ export default function Banner() {
         made simple
       </motion.h1>
       <motion.p
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.5 }}
-  className="text-lg mb-6 pt-36"
->
-  Your dream home, within reach. Experience exceptional mortgage services.
-</motion.p>
-<motion.ul
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1, delay: 1 }}
-  className="flex flex-col gap-2 mb-6"
->
-  <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Competitive Rates</li>
-  <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Personalized Solutions</li>
-  <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Fast Approvals</li>
-</motion.ul>
-<motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.5, delay: 1 }}
->
-  <Button className="bg-primary hover:bg-secondary transition-all text-lg px-6 py-3 mb-10 rounded-lg">
-    Get Started Today
-  </Button>
-</motion.div>
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="text-lg mb-6 pt-36"
+      >
+        Your dream home, within reach. Experience exceptional mortgage services.
+      </motion.p>
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="flex flex-col gap-2 mb-6"
+      >
+        <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Competitive Rates</li>
+        <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Personalized Solutions</li>
+        <li className="flex items-center gap-2"><CheckCircle className="text-green-400" /> Fast Approvals</li>
+      </motion.ul>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        <Link href="/start">
+          <Button className="bg-primary hover:bg-secondary transition-all text-lg px-6 py-3 mb-10 rounded-lg">
+            Get Started Today
+          </Button>
+        </Link>
+      </motion.div>
     </section>
   );
 }
