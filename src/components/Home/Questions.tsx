@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -7,8 +9,8 @@ const GuideFAQSection = () => {
 
   const [selectedTab, setSelectedTab] = React.useState<TabKey>("Guides & FAQs");
 
-  const tabs = ["Our products", "Calculators", "Guides & FAQs"];
-
+  const tabs: TabKey[] = ["Our products", "Calculators", "Guides & FAQs"];
+  
   const cardData: Record<TabKey, { title: string; link: string; img: string; desc: string }[]> = {
     "Our products": [
       {
