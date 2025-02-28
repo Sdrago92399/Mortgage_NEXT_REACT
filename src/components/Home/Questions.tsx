@@ -3,54 +3,56 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const GuideFAQSection = () => {
-  const [selectedTab, setSelectedTab] = useState("Guides & FAQs");
+  type TabKey = "Our products" | "Calculators" | "Guides & FAQs";
+
+  const [selectedTab, setSelectedTab] = React.useState<TabKey>("Guides & FAQs");
 
   const tabs = ["Our products", "Calculators", "Guides & FAQs"];
 
-const cardData: Record<TabKey, { title: string; link: string; img: string; desc: string }[]> = {
-  "Our products": [
-    {
-      title: "Buying your first home with Better",
-      link: "/content/buying-your-first-home-with-better-mortgage/",
-      img: "https://picsum.photos/200/300?random=5",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "One Day Mortgage",
-      link: "/b/one-day-mortgage/",
-      img: "https://picsum.photos/200/300?random=6",
-      desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-  ],
-  "Calculators": [
-    {
-      title: "Mortgage Calculator",
-      link: "/tools/mortgage-calculator/",
-      img: "https://picsum.photos/200/300?random=1",
-      desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "Refinance Calculator",
-      link: "/tools/refinance-calculator/",
-      img: "https://picsum.photos/200/300?random=2",
-      desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-  ],
-  "Guides & FAQs": [
-    {
-      title: "Better HELOC",
-      link: "/b/heloc/",
-      img: "https://picsum.photos/200/300?random=3",
-      desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      title: "Home Insurance Guide",
-      link: "https://www.bettercover.com",
-      img: "https://picsum.photos/200/300?random=4",
-      desc: "Culpa qui officia deserunt mollit anim id est laborum.",
-    },
-  ],
-};
+  const cardData: Record<TabKey, { title: string; link: string; img: string; desc: string }[]> = {
+    "Our products": [
+      {
+        title: "Buying your first home with Better",
+        link: "/content/buying-your-first-home-with-better-mortgage/",
+        img: "https://picsum.photos/200/300?random=5",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        title: "One Day Mortgage",
+        link: "/b/one-day-mortgage/",
+        img: "https://picsum.photos/200/300?random=6",
+        desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+    ],
+    "Calculators": [
+      {
+        title: "Mortgage Calculator",
+        link: "/tools/mortgage-calculator/",
+        img: "https://picsum.photos/200/300?random=1",
+        desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      },
+      {
+        title: "Refinance Calculator",
+        link: "/tools/refinance-calculator/",
+        img: "https://picsum.photos/200/300?random=2",
+        desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      },
+    ],
+    "Guides & FAQs": [
+      {
+        title: "Better HELOC",
+        link: "/b/heloc/",
+        img: "https://picsum.photos/200/300?random=3",
+        desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        title: "Home Insurance Guide",
+        link: "https://www.bettercover.com",
+        img: "https://picsum.photos/200/300?random=4",
+        desc: "Culpa qui officia deserunt mollit anim id est laborum.",
+      },
+    ],
+  };
 
   return (
     <div className="bg-white p-10">
