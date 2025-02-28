@@ -7,7 +7,7 @@ const GuideFAQSection = () => {
 
   const tabs = ["Our products", "Calculators", "Guides & FAQs"];
 
-const cardData = {
+const cardData: Record<TabKey, { title: string; link: string; img: string; desc: string }[]> = {
   "Our products": [
     {
       title: "Buying your first home with Better",
