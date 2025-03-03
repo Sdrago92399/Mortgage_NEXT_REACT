@@ -10,15 +10,15 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full p-4 text-white flex justify-between bg-[rgb(0,71,51)] items-center z-50">
-      <div className="text-xl font-bold">
+      <div className="md:text-xl font-bold">
         <Link href="/">MyLogo</Link>
       </div>
-      <div className="flex space-x-6">
+      <div className="flex md:space-x-6 md:text-lg">
         <Popover>
           <PopoverTrigger asChild>
             <div className="relative">
               <Button
-                className="hover:text-secondary hover:bg-white rounded-full transition-all text-lg"
+                className="hover:text-secondary hover:bg-white rounded-full transition-all"
                 variant="ghost"
                 size="lg"
                 onClick={() => setIsHovered(!isHovered)}
@@ -53,7 +53,7 @@ export default function Navbar() {
         </Popover>
         <Link href="/start">
           <Button
-            className="hover:text-secondary hover:bg-white rounded-full transition-all text-lg"
+            className="hover:text-secondary px-3 hover:bg-white rounded-full transition-all"
             variant="ghost"
             size="lg"
           >
@@ -62,7 +62,7 @@ export default function Navbar() {
         </Link>
         <Link href="/about-us">
           <Button
-            className="hover:text-secondary hover:bg-white rounded-full transition-all text-lg"
+            className="hover:text-secondary hover:bg-white rounded-full transition-all"
             variant="ghost"
             size="lg"
           >

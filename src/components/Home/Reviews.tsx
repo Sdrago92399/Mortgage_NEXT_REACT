@@ -38,7 +38,7 @@ export default function Reviews() {
       <div className="section m-auto flex max-w-screen-2xl flex-col justify-between gap-x-3xl p-base px-lg py-4xl md:px-10 md:flex-row-reverse xl:p-[120px]">
         {/* Top Section: Heading, CTA, Rating */}
         <div className="flex flex-col items-start justify-between mb-8">
-          <h2 className="font-bold text-textPrimary leading-heading mb-8 w-auto tracking-tight md:tracking-tighter mb-lg leading-small text-[88px] leading-[1.2]">
+          <h2 className="font-bold mr-16 md:mr-0 leading-heading mb-8 w-auto tracking-tight md:tracking-tighter mb-lg leading-small text-6xl md:text-[88px] leading-[1.2]">
             Find out why we’re better
           </h2>
           <button className="bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-all">

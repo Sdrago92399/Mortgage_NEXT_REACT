@@ -9,7 +9,7 @@ export default function Banner() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="font-bold leading-tight m-0 p-0 w-auto tracking-tight md:tracking-tighter top-32 z-1 text-center text-[50px] text-[rgb(30,224,127)] md:relative md:top-[72px] lg:top-32 md:p-0 md:text-4xl lg:text-[118px] lg:leading-[1.2]"
+        className="font-bold leading-tight m-0 pt-20 w-auto tracking-tight md:tracking-tighter top-32 z-1 text-center text-[50px] text-[rgb(30,224,127)] md:relative md:top-[72px] lg:top-32 md:p-0 md:text-4xl lg:text-[118px] lg:leading-[1.2]"
       >
         Mortgages
         <br />
@@ -19,7 +19,7 @@ export default function Banner() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="text-lg mb-6 pt-36"
+        className="text-lg mb-6 pt-20 lg:pt-36 md:pt-36"
       >
         Your dream home, within reach. Experience exceptional mortgage services.
       </motion.p>

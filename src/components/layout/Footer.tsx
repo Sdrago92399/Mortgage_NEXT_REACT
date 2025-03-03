@@ -5,8 +5,8 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-10">
-      <div className="container mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between">
+    <footer className="bg-gray-900 text-gray-200 py-10 text-center">
+      <div className="container mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center">
         {/* Logo and Description */}
         <div className="mb-6 md:mb-0">
           <h2 className="text-3xl font-bold">Better.com Replica</h2>
@@ -15,11 +15,11 @@ export default function Footer() {
         </div>
 
         {/* Link Groups */}
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-row md:flex-row gap-8">
           {/* Company Links */}
-          <div>
+          <div className="w-full">
             <h3 className="font-semibold mb-4">Company</h3>
-            <ul>
+            <ul className="w-full">
               <li className="mb-2">
                 <Link href="/about-us" className="hover:text-white transition">About Us</Link>
               </li>
@@ -33,9 +33,9 @@ export default function Footer() {
           </div>
 
           {/* Support Links */}
-          <div>
+          <div className="w-full">
             <h3 className="font-semibold mb-4">Support</h3>
-            <ul>
+            <ul className="w-full">
               <li className="mb-2">
                 <Link href="/contact" className="hover:text-white transition">Contact Us</Link>
               </li>
@@ -49,9 +49,9 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div>
+          <div className="w-full">
             <h3 className="font-semibold mb-4">Legal</h3>
-            <ul>
+            <ul className="w-full">
               <li className="mb-2">
                 <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
               </li>
@@ -61,10 +61,11 @@ export default function Footer() {
             </ul>
           </div>
 
+        </div>
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <h3 className="font-semibold mb-4 mt-4">Follow Us</h3>
+            <div className="flex space-x-4 items-center">
               <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF className="hover:text-white transition" />
               </Link>
@@ -79,7 +80,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
       </div>
 
       {/* Bottom Note */}
